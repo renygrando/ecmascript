@@ -1,11 +1,3 @@
-"use strict";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 // const arr = [ 1, 3, 4, 5, 8, 9]
 // const newArr = arr.map((item) => {
 //   return item * 2 
@@ -82,14 +74,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 // const arr2 = [4, 5, 6]
 // const arr3 = [ ...arr1, ...arr2 ]
 // console.log(arr3)
-var usuario1 = {
-  nome: "Reny",
-  idade: 23,
-  empresa: "oliver"
-};
-
-var usuario2 = _objectSpread(_objectSpread({}, usuario1), {}, {
-  nome: 'Pipoca'
-});
-
-console.log(usuario2);
+// const usuario1 = {
+//   nome: "Reny",
+//   idade: 23,
+//   empresa: "oliver"
+// }
+// const usuario2 = {...usuario1, nome: 'Pipoca'}
+// console.log(usuario2)
+// // TEMPLATE LITERALS
+// const nome = 'Reny'
+// const idade = 31
+// console.log(`meu nome é ${nome} e tenho ${idade} anos.`)
+// // OBJECT SHORT SYNTAX
+// const nome = "Reny"
+// const idade = 31
+// const usuario = {
+// 	nome, // aqui não precisamos atribuir o valor à propriedade
+// 	idade,
+// 	empresa: "Rocketseat"
+// }
+// console.log(usuario)
+"use strict";
