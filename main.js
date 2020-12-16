@@ -146,6 +146,8 @@
 
 // console.log(usuario)
 
-import { soma } from './functions'
+import { multiplica, soma } from './functions'
 
-console.log(soma(1,2))
+console.log(soma(1,1))
+
+console.log(multiplica(1, 2,3))
